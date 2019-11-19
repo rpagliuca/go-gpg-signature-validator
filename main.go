@@ -49,7 +49,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func GpgSignatureIsValid(armoredMessage string, expectedKeyId string) (bool, string, error) {
-	/* Decoded amored message */
+	/* Decoded armored message */
 	decoded, err := armor.Decode(strings.NewReader(armoredMessage))
 	if err != nil {
 		return false, "", errors.New("Error decoding armored message")
